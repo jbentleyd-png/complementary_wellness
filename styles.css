@@ -33,6 +33,9 @@ body {
   position: -webkit-sticky; /* For Safari compatibility */
   position: sticky;
   top: 0;
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.1),
+    0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .header p {
