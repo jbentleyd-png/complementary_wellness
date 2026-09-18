@@ -65,8 +65,8 @@ body {
   margin-bottom: 20px;
 }
 
-.carousel > div,
-.products-grid > div {
+.carousel div,
+.products-grid div {
   width: 175px;
   height: 240px;
   box-sizing: border-box;
@@ -94,15 +94,21 @@ body {
   background-color: green;
 }
 
-.carousel a,
-.products-grid a {
-  place-self: center;
-}
-
 h2 {
   margin: 35px;
 }
 
 h2.EES {
   margin-bottom: 15px;
+}
+
+.card-link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-link p {
+  place-self: center;
+  margin: 0;
 }
