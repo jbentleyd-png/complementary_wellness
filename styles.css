@@ -98,10 +98,6 @@ h2 {
   margin: 35px;
 }
 
-h2.EES {
-  margin-bottom: 15px;
-}
-
 .card-link {
   display: flex;
   color: inherit;
@@ -111,4 +107,14 @@ h2.EES {
 .card-link p {
   place-self: center;
   margin: 0;
+}
+
+div.EES {
+  display: flex;
+  gap: 30px;
+  max-width: 1000px;
+}
+
+h2.EES {
+  margin-bottom: 15px;
 }
