@@ -54,11 +54,15 @@ body {
 .carousel {
   display: flex;
   gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .products-grid {
   display: flex;
   gap: 15px;
+  margin-bottom: 20px;
 }
 
 .carousel > div,
@@ -67,7 +71,7 @@ body {
   height: 225px;
   box-sizing: border-box;
   padding: 10px;
-  background-color: white;
+  background-color: rgb(250, 254, 255);
   border: 1px solid black;
   border-radius: 8px;
   box-shadow:
@@ -86,5 +90,14 @@ body {
   height: 100px;
   margin: 0;
   place-self: center;
-  border-radius: 8px;
+  border-radius: 12px;
+  background-color: green;
+}
+
+h2 {
+  margin: 35px;
+}
+
+h2.EES {
+  margin-bottom: 15px;
 }
