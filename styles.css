@@ -64,23 +64,27 @@ body {
 .carousel > div,
 .products-grid > div {
   width: 200px;
-  height: 200px;
+  height: 225px;
+  box-sizing: border-box;
+  padding: 10px;
   background-color: white;
   border: 1px solid black;
   border-radius: 8px;
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.1),
     0 1px 2px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-rows: 120px 1fr;
   text-align: center;
-  gap: 5px;
+  gap: 10px;
 }
+/* Make the above grid, actually? for better image and text lineup? */
 
 .carousel img,
 .products-grid img {
   width: 125px;
   height: 100px;
+  margin: 0;
+  place-self: center;
+  border-radius: 8px;
 }
