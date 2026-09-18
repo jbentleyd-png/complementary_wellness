@@ -19,6 +19,8 @@ body {
   padding: 0;
 }
 
+/* HEADER */
+
 .header {
   width: 100vw;
   box-sizing: border-box;
@@ -43,6 +45,7 @@ body {
   margin: 0;
 }
 
+/* MAIN SECTION */
 .main-section {
   box-sizing: border-box;
   padding: 15px;
@@ -51,6 +54,11 @@ body {
   align-items: center;
 }
 
+h2 {
+  margin: 35px;
+}
+
+/* card containers */
 .carousel {
   display: flex;
   gap: 15px;
@@ -63,6 +71,14 @@ body {
   display: flex;
   gap: 15px;
   margin-bottom: 20px;
+}
+
+/* cards */
+
+.card-link {
+  display: flex;
+  color: inherit;
+  text-decoration: none;
 }
 
 .carousel div,
@@ -82,7 +98,6 @@ body {
   text-align: center;
   gap: 10px;
 }
-/* Make the above grid, actually? for better image and text lineup? */
 
 .carousel img,
 .products-grid img {
@@ -94,21 +109,12 @@ body {
   background-color: green;
 }
 
-h2 {
-  margin: 35px;
-}
-
-.card-link {
-  display: flex;
-  color: inherit;
-  text-decoration: none;
-}
-
 .card-link p {
   place-self: center;
   margin: 0;
 }
 
+/* EES section */
 h2.EES {
   margin-bottom: 15px;
 }
@@ -116,6 +122,10 @@ h2.EES {
 div.EES {
   display: flex;
   max-width: 1200px;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 div.EES > div {
@@ -129,11 +139,4 @@ div.EES img {
   height: auto;
   object-fit: cover;
   margin-bottom: 50px;
-}
-
-@media (max-width: 600px) {
-  div.EES {
-    flex-direction: column;
-    align-items: center;
-  }
 }
