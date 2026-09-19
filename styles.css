@@ -157,17 +157,24 @@ h2 {
 }
 
 /* EES section */
-h2.EES {
-  margin-bottom: 15px;
+
+.EES-background {
+  width: 100vw;
+  background-color: var(--card-color);
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px 30px;
 }
 
 div.EES {
   display: flex;
-  max-width: 1200px;
+  max-width: 1250px;
+  padding: 15px;
+
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
   }
 }
 
@@ -177,11 +184,15 @@ div.EES > div {
   margin-right: 15px;
 }
 
+h2.EES {
+  margin: 0;
+  text-align: start;
+}
+
 div.EES img {
   width: 350px;
   height: auto;
   object-fit: cover;
-  margin-bottom: 30px;
 }
 
 /* FOOTER */
