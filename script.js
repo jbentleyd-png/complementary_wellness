@@ -1,3 +1,6 @@
+// Enables drag and click scrolling for desktop.
+//Entirely vibe-coded, feel free to refactor when cracked.
+
 const track = document.querySelector(".carousel-track");
 const container = document.querySelector(".carousel-container");
 const prevBtn = document.querySelector(".prev-btn");
