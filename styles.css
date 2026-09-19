@@ -41,6 +41,9 @@ body {
   box-shadow:
     0 2px 4px rgba(0, 0, 0, 0.1),
     0 1px 2px rgba(0, 0, 0, 0.25);
+
+  z-index: 100;
+  /* always cover other objects */
 }
 
 .header p {
@@ -63,12 +66,89 @@ h2 {
 }
 
 /* card containers */
-.carousel {
+.carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  @media (hover: hover) and (pointer: fine) {
+    max-width: 75vw;
+  }
+}
+
+.carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Forces snapping */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Hide scrollbar for clean look */
+
+  cursor: grab;
+}
+
+.carousel-container:active {
+  cursor: grabbing;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+  /* safari */
+}
+
+.carousel-track {
   display: flex;
   gap: 15px;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 20px;
+}
+
+/* Arrow Button Styles */
+.nav-btn {
+  background: #222222a6;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  font-size: 1.2rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @media (hover: hover) and (pointer: fine) {
+    display: flex;
+  }
+}
+.prev-btn {
+  left: -25px;
+}
+.next-btn {
+  right: -25px;
+}
+.nav-btn:hover {
+  background: #444;
+}
+
+/* Dots Layout */
+.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+}
+.dot.active {
+  background: #3498db;
 }
 
 .products-grid {
@@ -83,9 +163,10 @@ h2 {
   display: flex;
   color: inherit;
   text-decoration: none;
+  scroll-snap-align: center; /* Snaps card to center of view */
 }
 
-.carousel div,
+.carousel-track div,
 .products-grid div {
   width: 350px;
   height: 375px;
@@ -118,7 +199,7 @@ h2 {
   }
 }
 
-.carousel img,
+.carousel-track img,
 .products-grid img {
   width: 250px;
   height: 200px;
