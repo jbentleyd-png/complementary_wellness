@@ -235,6 +235,56 @@ div.EES img {
   object-fit: cover;
 }
 
+/* CONTACT FORM */
+.contact-section {
+  background-color: var(--main-background-color);
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+form {
+  background-color: var(--green);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 1000px;
+
+  border-radius: 10px;
+  margin: auto 10px;
+}
+
+form h3 {
+  color: white;
+  font-weight: 800;
+  margin-bottom: 20px;
+  margin-left: 11px;
+  font-size: 20px;
+}
+form input,
+form textarea {
+  border: 0;
+  margin: 10px;
+  padding: 20px;
+  outline: none;
+  background: var(--card-color);
+  font-size: 16px;
+}
+
+form button {
+  padding: 15px;
+  background: rgb(255, 130, 130);
+  color: black;
+  font-size: 18px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  margin: 20px auto 0px;
+  border-radius: 30px;
+}
 /* FOOTER */
 
 .footer {
