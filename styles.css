@@ -68,10 +68,15 @@ body {
 }
 
 h2 {
-  margin: 35px;
   text-align: center;
+  margin: 35px;
 }
 
+.main-section > p {
+  margin: -15px 15px 35px;
+  text-align: center;
+  color: rgb(58, 58, 58);
+}
 /* card containers */
 
 .carousel-track {
