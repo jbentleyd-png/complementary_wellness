@@ -53,11 +53,15 @@ body {
 
 .header img {
   width: 100px;
+  /* smaller desktop window */
+  @media (max-width: 1000px) {
+    width: 75px;
+  }
 }
 /* MAIN SECTION */
 .main-section {
   box-sizing: border-box;
-  padding: 15px;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,14 +78,15 @@ h2 {
   display: flex;
   gap: 15px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   justify-content: center;
 }
 
 .products-grid {
   display: flex;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  justify-content: center;
 }
 
 /* cards */
@@ -157,6 +162,11 @@ h2 {
     height: 100px;
   }
 }
+.products-section {
+  background-color: rgb(239, 253, 253);
+  width: 100%;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
 
 .products-grid img#avini {
   background-color: var(--card-color);
@@ -193,6 +203,7 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 40px 0px 30px;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
 }
 
 div.EES {
