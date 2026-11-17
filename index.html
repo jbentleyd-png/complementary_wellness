@@ -115,26 +115,23 @@
           />
         </div>
       </div>
-      <div class="contact-section">
-        <form action="">
-          <h3>Get in Touch</h3>
-          <input type="text" id="name" placeholder="Name" required />
-          <input type="text" id="phone" placeholder="Phone Number" required />
-          <input
-            type="text"
-            id="email"
-            placeholder="youremail@address.com"
-            required
-          />
-          <textarea
-            id="message"
-            rows="4"
-            placeholder="How can we help you?"
-          ></textarea>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </div>
+<div class="contact-section">
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <h3>Contact Me</h3>
+
+    <input type="hidden" name="access_key" value="a2b9a8d7-3c85-4a0d-b363-58aa1ff4d96e" />
+    <input type="hidden" name="subject" value="New message from your landing page" />
+    <input type="hidden" name="redirect" value="https://yoursite.com/thanks.html" />
+    <input type="checkbox" name="botcheck" style="display: none" tabindex="-1" autocomplete="off" />
+
+    <input type="text" id="name" name="name" placeholder="Name" required />
+    <input type="tel" id="phone" name="phone" placeholder="Phone Number" required />
+    <input type="email" id="email" name="email" placeholder="youremail@address.com" required />
+    <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
+
+    <button type="submit">Send</button>
+  </form>
+</div>
     <div class="footer">
       Images are sourced from the various product/service websites and are not
       the property of Complementary Wellness, LLC.
